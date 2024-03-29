@@ -10,6 +10,9 @@
 /**
  * struct binary_tree_s - Binary tree node
  *
+ * @n: Integer stored in the node
+ * @parent: Pointer to the parent node
+ * @left: Pointer to the left child node
  * @right: Pointer to the right child node
  */
 struct binary_tree_s
@@ -25,6 +28,10 @@ typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
 /*  linked list for advanced 101 the levelorder */
 /**
+ * struct link_s - structure for advanced tasks
+ *
+ * @n: depth of node specified
+ * @node: node of tree to store
  * @next: next node of the linked list
  */
 typedef struct link_s
@@ -33,7 +40,7 @@ typedef struct link_s
 	struct binary_tree_s const *node;
 	struct link_s *next;
 } link_t;
-/*  mandatory task */
+/*  ----------------- mandatory task ---------------------------------*/
 void binary_tree_print(const binary_tree_t *);
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
@@ -54,7 +61,7 @@ int binary_tree_is_full(const binary_tree_t *tree);
 int binary_tree_is_perfect(const binary_tree_t *tree);
 binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
-/* task*/
+/*  ------------------ advanced task -----------------------------------*/
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 const binary_tree_t *second);
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
